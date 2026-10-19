@@ -5,7 +5,7 @@
  */
 
 function gvs_stylesheets() {
-	return array( 'base', 'header', 'hero' );
+	return array( 'base', 'header', 'hero', 'about' );
 }
 
 add_action( 'wp_enqueue_scripts', function () {
