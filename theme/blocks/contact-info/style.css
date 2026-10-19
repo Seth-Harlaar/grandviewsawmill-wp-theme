@@ -1,0 +1,42 @@
+.contact-info .section-hd {
+	margin-bottom: 28px;
+}
+
+.contact-lede {
+	font-size: 19px;
+	line-height: 1.55;
+	color: rgba(255, 255, 255, 0.6);
+	max-width: 40ch;
+	margin: 0 0 40px;
+}
+
+.contact-block {
+	border-top: 1px solid var(--wp--preset--color--line);
+	padding: 22px 0;
+	display: grid;
+	grid-template-columns: 100px 1fr;
+	gap: 24px;
+}
+
+.contact-block:last-child {
+	border-bottom: 1px solid var(--wp--preset--color--line);
+}
+
+.contact-block .label {
+	padding-top: 4px;
+}
+
+.contact-block .v {
+	font-family: var(--wp--preset--font-family--serif);
+	font-size: 22px;
+	line-height: 1.3;
+}
+
+.contact-block .v small {
+	display: block;
+	margin-top: 2px;
+	font-family: var(--wp--preset--font-family--mono);
+	font-size: 12px;
+	letter-spacing: 0.06em;
+	color: var(--wp--preset--color--ink-mute);
+}

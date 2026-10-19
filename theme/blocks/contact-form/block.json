@@ -1,0 +1,12 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "grandview/contact-form",
+	"title": "Contact Form",
+	"category": "theme",
+	"description": "Quote request form. Submissions are saved as Messages in the admin.",
+	"supports": { "html": false },
+	"style": "file:./style.css",
+	"viewScript": "file:./view.js",
+	"render": "file:./render.php"
+}

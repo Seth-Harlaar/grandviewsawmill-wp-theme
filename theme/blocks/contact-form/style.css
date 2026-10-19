@@ -1,0 +1,129 @@
+.contact-form {
+	background: var(--wp--preset--color--bg-card);
+	color: var(--wp--preset--color--ink);
+	border: 1px solid var(--wp--preset--color--line);
+	padding: 40px;
+	display: flex;
+	flex-direction: column;
+	gap: 18px;
+}
+
+.form-row {
+	display: flex;
+	flex-direction: column;
+	gap: 6px;
+}
+
+.form-row.split {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 14px;
+}
+
+.form-row > label {
+	font-family: var(--wp--preset--font-family--mono);
+	font-size: 10px;
+	letter-spacing: 0.14em;
+	text-transform: uppercase;
+	color: var(--wp--preset--color--ink-mute);
+}
+
+.form-row .req {
+	color: var(--wp--preset--color--accent);
+	margin-left: 4px;
+}
+
+.form-row input,
+.form-row textarea {
+	background: var(--wp--preset--color--bg);
+	border: 1px solid var(--wp--preset--color--line);
+	border-radius: 0;
+	padding: 14px 16px;
+	font-family: var(--wp--preset--font-family--serif);
+	font-size: 16px;
+	color: var(--wp--preset--color--ink);
+	outline: none;
+	transition: border-color 0.15s ease;
+}
+
+.form-row input:focus,
+.form-row textarea:focus {
+	border-color: var(--wp--preset--color--ink);
+}
+
+.form-row textarea {
+	min-height: 120px;
+	resize: vertical;
+}
+
+.form-err {
+	font-family: var(--wp--preset--font-family--mono);
+	font-size: 11px;
+	letter-spacing: 0.04em;
+	color: var(--wp--preset--color--accent-deep);
+}
+
+/* "What do you need?" options: checkboxes styled as toggle buttons. */
+.choose-svc-grid {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	gap: 6px;
+}
+
+.svc-option input {
+	position: absolute;
+	opacity: 0;
+	pointer-events: none;
+}
+
+.svc-option span {
+	display: block;
+	padding: 12px;
+	background: var(--wp--preset--color--bg);
+	border: 1px solid var(--wp--preset--color--line);
+	font-family: var(--wp--preset--font-family--mono);
+	font-size: 11px;
+	letter-spacing: 0.08em;
+	text-transform: uppercase;
+	color: var(--wp--preset--color--ink-soft);
+	cursor: pointer;
+	transition: all 0.15s ease;
+}
+
+.svc-option:hover span,
+.svc-option input:focus-visible + span {
+	border-color: var(--wp--preset--color--ink);
+}
+
+.svc-option input:checked + span {
+	background: var(--wp--preset--color--ink);
+	border-color: var(--wp--preset--color--ink);
+	color: var(--wp--preset--color--bg);
+}
+
+.contact-submit {
+	align-self: flex-start;
+	margin-top: 4px;
+	cursor: pointer;
+}
+
+.contact-submit::after {
+	content: " →";
+	font-family: serif;
+}
+
+.form-success {
+	background: var(--wp--preset--color--moss);
+	color: var(--wp--preset--color--bg);
+	padding: 28px;
+	text-align: center;
+	font-family: var(--wp--preset--font-family--serif);
+	font-size: 22px;
+	font-style: italic;
+}
+
+.form-success .label {
+	color: rgba(255, 255, 255, 0.7);
+	margin-bottom: 8px;
+	font-style: normal;
+}

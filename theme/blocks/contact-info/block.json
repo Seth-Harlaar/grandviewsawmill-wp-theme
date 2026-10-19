@@ -1,0 +1,11 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "grandview/contact-info",
+	"title": "Contact Info",
+	"category": "theme",
+	"description": "Heading, address, phone and email for the contact section.",
+	"supports": { "html": false },
+	"style": "file:./style.css",
+	"render": "file:./render.php"
+}

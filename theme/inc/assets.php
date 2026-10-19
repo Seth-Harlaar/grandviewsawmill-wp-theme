@@ -5,7 +5,7 @@
  */
 
 function gvs_stylesheets() {
-	return array( 'base', 'header', 'hero', 'about', 'services', 'footer', 'products', 'product-detail', 'inventory' );
+	return array( 'base', 'header', 'hero', 'about', 'services', 'footer', 'products', 'product-detail', 'inventory', 'contact' );
 }
 
 add_action( 'wp_enqueue_scripts', function () {
