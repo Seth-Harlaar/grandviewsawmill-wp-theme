@@ -1,0 +1,12 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "grandview/category-card",
+	"title": "Category Card",
+	"category": "theme",
+	"description": "One product category as a card. Use inside a Terms Query.",
+	"usesContext": [ "termId", "taxonomy" ],
+	"supports": { "html": false },
+	"style": [ "grandview-product-card-style" ],
+	"render": "file:./render.php"
+}

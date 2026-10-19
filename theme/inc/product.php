@@ -10,9 +10,19 @@ add_action( 'init', function () {
 	register_post_type( 'product', array(
 		'label'       => 'Products',
 		'public'      => true,
-		'has_archive' => true,
+		'has_archive' => false, // No /product/ list page; products are listed per category.
 		'menu_icon'   => 'dashicons-cart',
 		'supports'    => array( 'title', 'editor' ),
+	) );
+
+	// Product categories, attached to products. Each one has a Name and
+	// Description. Manage them under Products -> Product Categories;
+	// tick them on each product's edit screen.
+	register_taxonomy( 'product_category', 'product', array(
+		'label'             => 'Product Categories',
+		'hierarchical'      => true, // Checkboxes and parent categories, like post Categories.
+		'show_admin_column' => true, // Adds a Categories column to the Products list.
+		'rewrite'           => array( 'slug' => 'product-category' ),
 	) );
 } );
 
@@ -20,6 +30,11 @@ add_action( 'init', function () {
 function gvs_format_price( $price ) {
 	$price = (float) $price;
 	return '$' . number_format_i18n( $price, floor( $price ) == $price ? 0 : 2 );
+}
+
+// Cuts text to $max characters with "…". Used for card titles.
+function gvs_truncate( $text, $max = 40 ) {
+	return mb_strlen( $text ) > $max ? rtrim( mb_substr( $text, 0, $max - 1 ) ) . '…' : $text;
 }
 
 add_action( 'add_meta_boxes', function () {

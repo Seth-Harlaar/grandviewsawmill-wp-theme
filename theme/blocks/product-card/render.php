@@ -10,10 +10,7 @@ $price    = get_post_meta( $post_id, 'price', true );
 $quantity = (int) get_post_meta( $post_id, 'quantity', true );
 $unit     = get_post_meta( $post_id, 'unit', true );
 $title    = html_entity_decode( wp_strip_all_tags( get_the_title( $post_id ) ), ENT_QUOTES, 'UTF-8' );
-
-// Long titles are cut to this many characters, with the full title as a tooltip.
-$max_title = 40;
-$short     = mb_strlen( $title ) > $max_title ? rtrim( mb_substr( $title, 0, $max_title - 1 ) ) . '…' : $title;
+$short    = gvs_truncate( $title ); // Long titles are cut, with the full title as a tooltip.
 ?>
 <a href="<?php echo esc_url( get_permalink( $post_id ) ); ?>" <?php echo get_block_wrapper_attributes( array( 'class' => 'inv-card' ) ); ?>>
 	<div class="inv-img ph" data-label="<?php echo esc_attr( $short ); ?>"></div>

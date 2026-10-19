@@ -28,7 +28,7 @@
 <!-- wp:buttons {"className":"hero-actions"} -->
 <div class="wp-block-buttons hero-actions">
 <!-- wp:button {"className":"btn-arrow"} -->
-<div class="wp-block-button btn-arrow"><a class="wp-block-button__link wp-element-button" href="<?php echo esc_url( home_url( '/#inventory' ) ); ?>">Browse Slabs</a></div>
+<div class="wp-block-button btn-arrow"><a class="wp-block-button__link wp-element-button" href="<?php echo esc_url( home_url( '/categories/' ) ); ?>">Browse Products</a></div>
 <!-- /wp:button -->
 
 <!-- wp:button {"className":"btn-ghost"} -->

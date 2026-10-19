@@ -4,7 +4,13 @@
 <main class="wp-block-group section">
 <!-- wp:group {"className":"shell"} -->
 <div class="wp-block-group shell">
-<!-- wp:query-title {"type":"archive","showPrefix":false,"className":"products-title"} /-->
+<!-- wp:group {"className":"section-hd"} -->
+<div class="wp-block-group section-hd">
+<!-- wp:query-title {"type":"archive","showPrefix":false} /-->
+
+<!-- wp:term-description {"className":"section-intro"} /-->
+</div>
+<!-- /wp:group -->
 
 <!-- wp:query {"queryId":1,"query":{"inherit":true}} -->
 <div class="wp-block-query">
@@ -14,7 +20,7 @@
 
 <!-- wp:query-no-results -->
 <!-- wp:paragraph -->
-<p>No products yet.</p>
+<p>No products in this category yet.</p>
 <!-- /wp:paragraph -->
 <!-- /wp:query-no-results -->
 </div>
