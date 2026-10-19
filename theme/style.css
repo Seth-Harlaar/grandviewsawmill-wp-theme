@@ -1,0 +1,54 @@
+/*
+Theme Name: Grand View Sawmill
+Description: Basic starter theme. This comment header is what makes WordPress recognize the folder as a theme.
+Version: 0.1
+*/
+
+body {
+	margin: 0;
+	font-family: system-ui, sans-serif;
+	color: #2b2118;
+	background: #faf6f0;
+	line-height: 1.6;
+}
+
+.site-header,
+.site-footer {
+	background: #3d2b1f;
+	color: #faf6f0;
+	padding: 1rem 2rem;
+}
+
+.site-header a {
+	color: #faf6f0;
+	text-decoration: none;
+}
+
+.site-title {
+	margin: 0;
+	font-size: 1.5rem;
+}
+
+.site-header nav ul {
+	list-style: none;
+	display: flex;
+	gap: 1rem;
+	margin: 0.5rem 0 0;
+	padding: 0;
+}
+
+main {
+	max-width: 800px;
+	margin: 2rem auto;
+	padding: 0 1rem;
+}
+
+article {
+	border-bottom: 1px solid #ddd0bf;
+	padding-bottom: 1.5rem;
+	margin-bottom: 1.5rem;
+}
+
+article h2 a {
+	color: #8a4b1c;
+}

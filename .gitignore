@@ -1,0 +1,15 @@
+# Dependencies
+node_modules/
+vendor/
+
+# Local wp-env overrides
+.wp-env.override.json
+
+# Logs
+*.log
+
+# OS / editor files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
