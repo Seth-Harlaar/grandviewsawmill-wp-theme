@@ -1,0 +1,69 @@
+/* Services, ported from the Demo's .services / .svc styles. */
+
+.services {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 0;
+	border-top: 1px solid rgba(255, 255, 255, 0.15);
+	border-left: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.services > *,
+.svc > * {
+	margin-block: 0;
+}
+
+.svc {
+	border-right: 1px solid rgba(255, 255, 255, 0.15);
+	border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+	padding: 36px 32px 40px;
+	position: relative;
+	cursor: default;
+	transition: background 0.25s ease;
+}
+
+.svc:hover {
+	background: rgba(255, 255, 255, 0.04);
+}
+
+.svc h3 {
+	line-height: 1.1;
+	letter-spacing: -0.01em;
+	margin-bottom: 16px;
+}
+
+.svc p {
+	font-size: 17px;
+	line-height: 1.5;
+	color: rgba(255, 255, 255, 0.65);
+	margin-bottom: 28px;
+}
+
+.svc-list {
+	list-style: none;
+	padding: 0;
+	font-size: 12px;
+	letter-spacing: 0.06em;
+	text-transform: uppercase;
+	color: rgba(255, 255, 255, 0.55);
+	display: flex;
+	flex-direction: column;
+	gap: 8px;
+}
+
+.svc-list li {
+	display: flex;
+	gap: 10px;
+	margin: 0;
+}
+
+.svc-list li::before {
+	content: "—";
+	color: var(--wp--preset--color--accent-soft);
+}
+
+@media (max-width: 980px) {
+	.services {
+		grid-template-columns: 1fr;
+	}
+}
