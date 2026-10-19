@@ -1,0 +1,97 @@
+/* Hero, ported from the Demo's .hero styles (the "split" layout). */
+
+.hero {
+	padding: 56px 0 80px;
+	position: relative;
+	overflow: hidden;
+}
+
+.hero-inner {
+	max-width: 1440px;
+	margin: 0 auto;
+	padding: 0 48px;
+}
+
+.hero-grid {
+	display: grid;
+	grid-template-columns: 1.3fr 1fr;
+	gap: 56px;
+	align-items: end;
+}
+
+/* Spacing comes from the rules below, not WordPress's default block gap. */
+.hero-grid > *,
+.hero-text > * {
+	margin-block: 0;
+}
+
+.hero .label {
+	display: block;
+	margin-bottom: 28px;
+}
+
+.hero h1 {
+	color: var(--wp--preset--color--ink);
+	margin-bottom: 32px;
+}
+
+.hero-lede {
+	font-size: var(--wp--preset--font-size--medium);
+	line-height: 1.45;
+	color: var(--wp--preset--color--ink-soft);
+	max-width: 36ch;
+	margin-bottom: 40px;
+}
+
+.hero-actions {
+	gap: 14px;
+	align-items: center;
+}
+
+/* Buttons */
+
+.btn-arrow .wp-block-button__link {
+	display: inline-flex;
+	align-items: center;
+	gap: 10px;
+}
+
+.btn-arrow .wp-block-button__link::after {
+	content: "→";
+	font-family: serif;
+	transition: transform 0.2s ease;
+}
+
+.btn-arrow .wp-block-button__link:hover::after {
+	transform: translateX(4px);
+}
+
+.btn-ghost .wp-block-button__link {
+	background: transparent;
+	color: var(--wp--preset--color--ink);
+}
+
+.btn-ghost .wp-block-button__link:hover {
+	background: var(--wp--preset--color--ink);
+	border-color: var(--wp--preset--color--ink);
+	color: var(--wp--preset--color--bg);
+}
+
+/* Image */
+
+.hero-image {
+	aspect-ratio: 3 / 4;
+	background-color: var(--wp--preset--color--bg-deep);
+	overflow: hidden;
+}
+
+@media (max-width: 980px) {
+	.hero-inner {
+		padding: 0 24px;
+	}
+
+	.hero-grid {
+		grid-template-columns: 1fr;
+		gap: 32px;
+	}
+}

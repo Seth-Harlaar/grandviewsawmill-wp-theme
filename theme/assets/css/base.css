@@ -1,0 +1,44 @@
+/* Site-wide pieces from the Demo that more than one section uses. */
+
+/* No gap between header, main and footer. */
+.wp-site-blocks > * {
+	margin-block-start: 0;
+}
+
+.wp-element-button {
+	transition: all 0.2s ease;
+}
+
+/* Small uppercase mono label. */
+.label {
+	font-family: var(--wp--preset--font-family--mono);
+	font-size: var(--wp--preset--font-size--label);
+	font-weight: 500;
+	letter-spacing: 0.14em;
+	text-transform: uppercase;
+	color: var(--wp--preset--color--ink-mute);
+}
+
+/* Striped image placeholder; data-label is printed in the corner. */
+.ph {
+	position: relative;
+	background:
+		repeating-linear-gradient(
+			45deg,
+			rgba(255, 255, 255, 0.03) 0 12px,
+			rgba(255, 255, 255, 0.06) 12px 24px
+		),
+		var(--wp--preset--color--bg-deep);
+}
+
+.ph::after {
+	content: attr(data-label);
+	position: absolute;
+	bottom: 12px;
+	left: 14px;
+	font-family: var(--wp--preset--font-family--mono);
+	font-size: 9px;
+	letter-spacing: 0.14em;
+	text-transform: uppercase;
+	color: rgba(255, 255, 255, 0.45);
+}
