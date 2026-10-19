@@ -11,7 +11,8 @@ function gvs_stylesheets() {
 add_action( 'wp_enqueue_scripts', function () {
 	// Front end.
 	foreach ( gvs_stylesheets() as $name ) {
-		wp_enqueue_style( "grandview-$name", get_theme_file_uri( "assets/css/$name.css" ), array(), wp_get_theme()->get( 'Version' ) );
+		// Version = file's last-modified time, so browsers fetch it again after every edit.
+		wp_enqueue_style( "grandview-$name", get_theme_file_uri( "assets/css/$name.css" ), array(), filemtime( get_theme_file_path( "assets/css/$name.css" ) ) );
 	}
 } );
 

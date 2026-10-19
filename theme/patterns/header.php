@@ -22,8 +22,20 @@
 <!-- wp:navigation {"overlayMenu":"never","className":"nav-links"} -->
 <!-- wp:navigation-link {"label":"About","url":"<?php echo esc_url( home_url( '/#about' ) ); ?>","kind":"custom"} /-->
 <!-- wp:navigation-link {"label":"Services","url":"<?php echo esc_url( home_url( '/#services' ) ); ?>","kind":"custom"} /-->
-<!-- wp:navigation-link {"label":"Slabs","url":"<?php echo esc_url( home_url( '/#inventory' ) ); ?>","kind":"custom"} /-->
-<!-- wp:navigation-link {"label":"Contact","url":"<?php echo esc_url( home_url( '/#contact' ) ); ?>","kind":"custom"} /-->
+<!-- wp:navigation-submenu {"label":"Products","url":"<?php echo esc_url( home_url( '/categories/' ) ); ?>","kind":"custom"} -->
+<?php
+// One dropdown link per product category, looked up on each page load.
+$gvs_categories = get_terms( array( 'taxonomy' => 'product_category', 'hide_empty' => false ) );
+foreach ( is_wp_error( $gvs_categories ) ? array() : $gvs_categories as $gvs_category ) {
+	$attrs = array(
+		'label' => $gvs_category->name,
+		'url'   => get_term_link( $gvs_category ),
+		'kind'  => 'custom',
+	);
+	echo '<!-- wp:navigation-link ' . wp_json_encode( $attrs ) . " /-->\n";
+}
+?>
+<!-- /wp:navigation-submenu -->
 <!-- /wp:navigation -->
 
 <!-- wp:group {"className":"nav-cta"} -->
