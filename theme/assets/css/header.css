@@ -1,0 +1,140 @@
+/* Header, ported from the Demo's .nav styles. */
+
+.wp-site-blocks > header.wp-block-template-part {
+	position: sticky;
+	top: var(--wp-admin--admin-bar--height, 0px);
+	z-index: 50;
+}
+
+.nav {
+	background: var(--wp--preset--color--bg-deep);
+	border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.nav-inner {
+	display: grid;
+	grid-template-columns: auto 1fr auto;
+	align-items: center;
+	gap: 32px;
+	height: 72px;
+	max-width: 1440px;
+	margin: 0 auto;
+	padding: 0 48px;
+}
+
+.nav-inner > * {
+	margin: 0;
+}
+
+/* Brand */
+
+.brand {
+	display: flex;
+	align-items: center;
+	gap: 12px;
+	color: var(--wp--preset--color--bg);
+}
+
+.brand-img {
+	height: 38px;
+	width: auto;
+	display: block;
+}
+
+.brand-word {
+	display: flex;
+	align-items: baseline;
+	gap: 9px;
+	font-family: var(--wp--preset--font-family--serif);
+	font-weight: 600;
+	font-size: 21px;
+	letter-spacing: 0.01em;
+}
+
+.brand small {
+	font-size: 12px;
+	font-weight: 500;
+	letter-spacing: 0.2em;
+	color: var(--wp--preset--color--accent-soft);
+	text-transform: uppercase;
+}
+
+/* Links */
+
+.nav-links {
+	justify-content: center;
+}
+
+.nav-links .wp-block-navigation__container {
+	gap: 28px;
+}
+
+.nav-links .wp-block-navigation-item__content {
+	font-family: var(--wp--preset--font-family--mono);
+	font-size: 12px;
+	letter-spacing: 0.1em;
+	text-transform: uppercase;
+	color: rgba(255, 255, 255, 0.65);
+	position: relative;
+	padding: 4px 0;
+}
+
+.nav-links .wp-block-navigation-item__content:hover {
+	color: #fff;
+}
+
+.nav-links .wp-block-navigation-item__content::after {
+	content: "";
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: -2px;
+	height: 1px;
+	background: var(--wp--preset--color--accent);
+	transform: scaleX(0);
+	transform-origin: left;
+	transition: transform 0.25s ease;
+}
+
+.nav-links .wp-block-navigation-item__content:hover::after {
+	transform: scaleX(1);
+}
+
+/* Phone + quote button */
+
+.nav-cta {
+	display: flex;
+	align-items: center;
+	gap: 16px;
+}
+
+.nav-cta > * {
+	margin: 0;
+}
+
+.nav-phone {
+	font-size: 12px;
+	color: rgba(255, 255, 255, 0.55);
+	letter-spacing: 0.05em;
+}
+
+.nav .wp-block-button__link {
+	background: var(--wp--preset--color--accent);
+	border-color: var(--wp--preset--color--accent);
+	color: var(--wp--preset--color--bg-deep);
+}
+
+.nav .wp-block-button__link:hover {
+	background: var(--wp--preset--color--accent-soft);
+	border-color: var(--wp--preset--color--accent-soft);
+}
+
+@media (max-width: 980px) {
+	.nav-inner {
+		padding: 0 24px;
+	}
+
+	.nav-links {
+		display: none;
+	}
+}

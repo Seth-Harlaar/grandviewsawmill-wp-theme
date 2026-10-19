@@ -13,9 +13,9 @@
 				{ "slug": "ink-soft", "color": "#4a3f33", "name": "Ink Soft" },
 				{ "slug": "ink-mute", "color": "#7a6d5c", "name": "Ink Mute" },
 				{ "slug": "line", "color": "#c9bfa8", "name": "Line" },
-				{ "slug": "accent", "color": "#b8500e", "name": "Burnt Sienna" },
-				{ "slug": "accent-deep", "color": "#7d3608", "name": "Accent Deep" },
-				{ "slug": "accent-soft", "color": "#d97842", "name": "Accent Soft" },
+				{ "slug": "accent", "color": "#b88d4a", "name": "Accent" },
+				{ "slug": "accent-deep", "color": "#8a6a38", "name": "Accent Deep" },
+				{ "slug": "accent-soft", "color": "#c5a26b", "name": "Accent Soft" },
 				{ "slug": "kraft", "color": "#d4c5a3", "name": "Kraft" },
 				{ "slug": "moss", "color": "#5a6240", "name": "Moss" }
 			]
