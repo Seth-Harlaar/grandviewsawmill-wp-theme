@@ -1,0 +1,27 @@
+<!-- wp:template-part {"slug":"header","tagName":"header"} /-->
+
+<!-- wp:group {"tagName":"main","className":"section"} -->
+<main class="wp-block-group section">
+<!-- wp:group {"className":"shell"} -->
+<div class="wp-block-group shell">
+<!-- wp:query-title {"type":"archive","showPrefix":false,"className":"products-title"} /-->
+
+<!-- wp:query {"queryId":1,"query":{"inherit":true}} -->
+<div class="wp-block-query">
+<!-- wp:post-template {"className":"inv-grid"} -->
+<!-- wp:grandview/product-card /-->
+<!-- /wp:post-template -->
+
+<!-- wp:query-no-results -->
+<!-- wp:paragraph -->
+<p>No products yet.</p>
+<!-- /wp:paragraph -->
+<!-- /wp:query-no-results -->
+</div>
+<!-- /wp:query -->
+</div>
+<!-- /wp:group -->
+</main>
+<!-- /wp:group -->
+
+<!-- wp:template-part {"slug":"footer","tagName":"footer"} /-->

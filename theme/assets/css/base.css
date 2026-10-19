@@ -78,6 +78,11 @@
 	color: rgba(255, 255, 255, 0.6);
 }
 
+/* Kraft-paper version of a section. */
+.section-kraft {
+	background: var(--wp--preset--color--bg-card);
+}
+
 @media (max-width: 980px) {
 	.shell {
 		padding: 0 24px;

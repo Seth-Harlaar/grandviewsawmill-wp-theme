@@ -1,0 +1,84 @@
+/* Product card. Loaded automatically on any page that uses the block. */
+
+.inv-card {
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+	min-width: 0; /* Let the card shrink to its column; one-line text gets cut, not stretched. */
+	background: var(--wp--preset--color--bg);
+	border: 1px solid var(--wp--preset--color--line);
+	color: inherit;
+	text-decoration: none;
+	transition: background 0.2s ease;
+}
+
+.inv-card:hover {
+	background: var(--wp--preset--color--bg-card);
+}
+
+.inv-img {
+	aspect-ratio: 4 / 3;
+	background-color: var(--wp--preset--color--bg-deep);
+	overflow: hidden;
+}
+
+.inv-body {
+	display: flex;
+	flex-direction: column;
+	flex: 1;
+	min-width: 0;
+	padding: 28px 28px 26px;
+}
+
+.inv-name {
+	font-family: var(--wp--preset--font-family--serif);
+	font-size: 22px;
+	letter-spacing: -0.01em;
+	margin-bottom: 6px;
+	/* Never wraps; anything still too wide for the card is cut off with "…". */
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+/* One line only, cut off with "…", so every card is the same height. */
+.inv-desc {
+	margin: 0 0 20px;
+	font-size: 15px;
+	color: var(--wp--preset--color--ink-soft);
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+.inv-foot {
+	display: flex;
+	justify-content: space-between;
+	align-items: baseline;
+	border-top: 1px solid var(--wp--preset--color--line);
+	padding-top: 16px;
+	margin-top: auto;
+}
+
+.inv-price {
+	font-family: var(--wp--preset--font-family--serif);
+	font-size: 22px;
+}
+
+.inv-price small {
+	font-family: var(--wp--preset--font-family--mono);
+	font-size: 12px;
+	color: var(--wp--preset--color--ink-mute);
+	margin-left: 4px;
+}
+
+.inv-status {
+	font-size: 11px;
+	font-weight: 500;
+	letter-spacing: 0.06em;
+	color: var(--wp--preset--color--moss);
+}
+
+.inv-status.sold {
+	color: var(--wp--preset--color--ink-mute);
+}

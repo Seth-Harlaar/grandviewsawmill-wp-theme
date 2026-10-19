@@ -1,0 +1,6 @@
+/* Homepage inventory section. The card grid itself comes from products.css,
+   so it matches the products list page. */
+
+.inventory-more {
+	margin-top: 48px;
+}

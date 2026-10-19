@@ -1,0 +1,12 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "grandview/product-card",
+	"title": "Product Card",
+	"category": "theme",
+	"description": "One product as a card. Use inside a Query Loop of products.",
+	"usesContext": [ "postId" ],
+	"supports": { "html": false },
+	"style": "file:./style.css",
+	"render": "file:./render.php"
+}

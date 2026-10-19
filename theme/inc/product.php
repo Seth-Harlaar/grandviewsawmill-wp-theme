@@ -16,6 +16,12 @@ add_action( 'init', function () {
 	) );
 } );
 
+// "100" -> "$100", "8.5" -> "$8.50". Used by the product card and detail blocks.
+function gvs_format_price( $price ) {
+	$price = (float) $price;
+	return '$' . number_format_i18n( $price, floor( $price ) == $price ? 0 : 2 );
+}
+
 add_action( 'add_meta_boxes', function () {
 	// Adds a "Product Details" box to the product edit screen.
 	add_meta_box( 'product_details', 'Product Details', 'gvs_product_details_box', 'product' );

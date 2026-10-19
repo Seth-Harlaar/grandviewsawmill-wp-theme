@@ -1,0 +1,12 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "grandview/product-meta",
+	"title": "Product Price & Stock",
+	"category": "theme",
+	"description": "A product's price, unit and stock. Use on the product detail page.",
+	"usesContext": [ "postId" ],
+	"supports": { "html": false },
+	"style": "file:./style.css",
+	"render": "file:./render.php"
+}
