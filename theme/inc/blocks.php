@@ -8,4 +8,5 @@ add_action( 'init', function () {
 	register_block_type( get_template_directory() . '/blocks/product-card' );
 	register_block_type( get_template_directory() . '/blocks/product-meta' );
 	register_block_type( get_template_directory() . '/blocks/category-card' ); // After product-card: reuses its CSS.
+	register_block_type( get_template_directory() . '/blocks/back-link' );
 } );

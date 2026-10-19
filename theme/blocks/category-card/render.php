@@ -23,6 +23,7 @@ $count = (int) $term->count;
 			<div class="inv-status<?php echo $count > 0 ? '' : ' sold'; ?>">
 				<?php echo esc_html( $count > 0 ? sprintf( _n( '%d product', '%d products', $count ), $count ) : 'No products yet' ); ?>
 			</div>
+			<span class="inv-more">View Products →</span><?php // A span, not a link: the whole card is already the link. ?>
 		</div>
 	</div>
 </a>

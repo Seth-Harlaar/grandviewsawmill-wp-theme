@@ -4,6 +4,11 @@
 	margin-bottom: 64px;
 }
 
+/* About 2/3 of the hero-size h1. */
+.page-title {
+	font-size: clamp(37px, 5.33vw, 88px);
+}
+
 /* Equal-width columns; minmax(0, 1fr) stops long text from widening one. */
 .inv-grid {
 	display: grid;

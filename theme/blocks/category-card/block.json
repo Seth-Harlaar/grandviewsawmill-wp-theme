@@ -7,6 +7,6 @@
 	"description": "One product category as a card. Use inside a Terms Query.",
 	"usesContext": [ "termId", "taxonomy" ],
 	"supports": { "html": false },
-	"style": [ "grandview-product-card-style" ],
+	"style": [ "grandview-product-card-style", "file:./style.css" ],
 	"render": "file:./render.php"
 }

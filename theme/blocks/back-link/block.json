@@ -1,0 +1,11 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "grandview/back-link",
+	"title": "Back Link",
+	"category": "theme",
+	"description": "On a product: back to its category. On a category: back to all categories.",
+	"supports": { "html": false },
+	"style": "file:./style.css",
+	"render": "file:./render.php"
+}

@@ -1,0 +1,14 @@
+/* Extras on top of the product card's CSS. */
+
+.inv-more {
+	font-family: var(--wp--preset--font-family--mono);
+	font-size: 11px;
+	letter-spacing: 0.08em;
+	text-transform: uppercase;
+	color: var(--wp--preset--color--ink-mute);
+	transition: color 0.15s ease;
+}
+
+.inv-card:hover .inv-more {
+	color: var(--wp--preset--color--accent);
+}
