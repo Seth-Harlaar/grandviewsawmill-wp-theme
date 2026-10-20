@@ -6,11 +6,11 @@
  */
 
 $post_id  = $block->context['postId'] ?? get_the_ID();
-$price    = get_post_meta( $post_id, 'price', true );
-$quantity = (int) get_post_meta( $post_id, 'quantity', true );
-$unit     = get_post_meta( $post_id, 'unit', true );
-$title    = html_entity_decode( wp_strip_all_tags( get_the_title( $post_id ) ), ENT_QUOTES, 'UTF-8' );
-$short    = gvs_truncate( $title ); // Long titles are cut, with the full title as a tooltip.
+$rows  = gvs_product_prices( $post_id );
+$only  = 1 === count( $rows ) ? $rows[0] : null; // Price and stock are only shown for a single price row.
+$stock = $only ? gvs_format_stock( $only['quantity'] ) : '';
+$title = html_entity_decode( wp_strip_all_tags( get_the_title( $post_id ) ), ENT_QUOTES, 'UTF-8' );
+$short = gvs_truncate( $title ); // Long titles are cut, with the full title as a tooltip.
 ?>
 <a href="<?php echo esc_url( get_permalink( $post_id ) ); ?>" <?php echo get_block_wrapper_attributes( array( 'class' => 'inv-card' ) ); ?>>
 	<div class="inv-img ph" data-label="<?php echo esc_attr( $short ); ?>"></div>
@@ -19,16 +19,16 @@ $short    = gvs_truncate( $title ); // Long titles are cut, with the full title 
 		<p class="inv-desc"><?php echo esc_html( wp_strip_all_tags( get_the_excerpt( $post_id ) ) ); ?></p>
 		<div class="inv-foot">
 			<div class="inv-price">
-				<?php if ( '' !== $price ) : ?>
-					<?php echo esc_html( gvs_format_price( $price ) ); ?>
-					<?php if ( $unit ) : ?>
-						<small>/ <?php echo esc_html( $unit ); ?></small>
+				<?php if ( count( $rows ) > 1 ) : ?>
+					Price varies
+				<?php elseif ( $only && '' !== $only['price'] ) : ?>
+					<?php echo esc_html( gvs_format_price( $only['price'] ) ); ?>
+					<?php if ( '' !== $only['unit'] ) : ?>
+						<small>/ <?php echo esc_html( $only['unit'] ); ?></small>
 					<?php endif; ?>
 				<?php endif; ?>
 			</div>
-			<div class="inv-status<?php echo $quantity > 0 ? '' : ' sold'; ?>">
-				<?php echo $quantity > 0 ? esc_html( "$quantity in stock" ) : 'Sold out'; ?>
-			</div>
+			<div class="inv-status<?php echo 'Sold out' === $stock ? ' sold' : ''; ?>"><?php echo esc_html( $stock ); ?></div>
 		</div>
 	</div>
 </a>

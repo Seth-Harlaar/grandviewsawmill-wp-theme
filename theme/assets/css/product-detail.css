@@ -20,8 +20,9 @@
 	margin-bottom: 32px;
 }
 
-.product-info .product-meta {
-	margin-bottom: 32px;
+/* Price table, full width under the image and info. */
+.shell > .product-prices {
+	margin-top: 64px;
 }
 
 .product-desc {
