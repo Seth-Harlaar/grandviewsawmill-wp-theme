@@ -7,5 +7,7 @@
 	"description": "A product's images. Use on the product detail page.",
 	"usesContext": [ "postId" ],
 	"supports": { "html": false },
+	"style": "file:./style.css",
+	"viewScript": "file:./view.js",
 	"render": "file:./render.php"
 }
