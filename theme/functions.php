@@ -7,4 +7,5 @@
 require_once get_template_directory() . '/inc/assets.php';
 require_once get_template_directory() . '/inc/blocks.php';
 require_once get_template_directory() . '/inc/product.php';
+require_once get_template_directory() . '/inc/category-image.php';
 require_once get_template_directory() . '/inc/contact.php';

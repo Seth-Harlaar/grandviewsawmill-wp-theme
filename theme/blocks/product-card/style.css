@@ -22,6 +22,14 @@
 	overflow: hidden;
 }
 
+/* Real photo: fill the box, cropping instead of stretching. */
+.inv-img img {
+	display: block;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
 .inv-body {
 	display: flex;
 	flex-direction: column;
